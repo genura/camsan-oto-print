@@ -61,7 +61,7 @@ end;
 
 procedure TFMain.N3Click(Sender: TObject);
 begin
-//
+//--
 Close();
 end;
 
