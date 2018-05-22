@@ -1,6 +1,6 @@
 object FMain: TFMain
-  Left = 326
-  Top = 151
+  Left = 463
+  Top = 154
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = #199'AMSAN Oto Print v0.1'
@@ -43,7 +43,7 @@ object FMain: TFMain
       Font.Style = []
       ParentFont = False
     end
-    object Edit1: TEdit
+    object EtiketAdi: TEdit
       Left = 16
       Top = 37
       Width = 489
@@ -55,9 +55,8 @@ object FMain: TFMain
       Font.Style = [fsBold, fsItalic]
       ParentFont = False
       TabOrder = 0
-      Text = 'Edit1'
     end
-    object BitBtn2: TBitBtn
+    object btnEtiketDosyaAc: TBitBtn
       Left = 511
       Top = 0
       Width = 82
@@ -263,7 +262,7 @@ object FMain: TFMain
       Font.Style = []
       ParentFont = False
     end
-    object SpinEdit1: TSpinEdit
+    object komutAraligi: TSpinEdit
       Left = 168
       Top = 32
       Width = 57
@@ -279,7 +278,7 @@ object FMain: TFMain
       TabOrder = 0
       Value = 0
     end
-    object SpinEdit2: TSpinEdit
+    object komutSayisi: TSpinEdit
       Left = 16
       Top = 32
       Width = 57
@@ -484,7 +483,7 @@ object FMain: TFMain
       Height = 13
       Caption = 'Genel :'
     end
-    object Label10: TLabel
+    object durumLabel: TLabel
       Left = 543
       Top = 29
       Width = 26
@@ -551,6 +550,7 @@ object FMain: TFMain
       object N3: TMenuItem
         Caption = #199#305'k'#305#351
         ShortCut = 16465
+        OnClick = N3Click
       end
     end
     object Y1: TMenuItem

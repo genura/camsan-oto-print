@@ -8,11 +8,11 @@ uses
 
 type
   TFMain = class(TForm)
-    Edit1: TEdit;
+    EtiketAdi: TEdit;
     Panel1: TPanel;
     Panel2: TPanel;
-    SpinEdit1: TSpinEdit;
-    SpinEdit2: TSpinEdit;
+    komutAraligi: TSpinEdit;
+    komutSayisi: TSpinEdit;
     MainMenu1: TMainMenu;
     D1: TMenuItem;
     N1: TMenuItem;
@@ -21,7 +21,7 @@ type
     Y1: TMenuItem;
     H1: TMenuItem;
     btnKomutGonder: TBitBtn;
-    BitBtn2: TBitBtn;
+    btnEtiketDosyaAc: TBitBtn;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -33,11 +33,12 @@ type
     Label9: TLabel;
     GroupBox3: TGroupBox;
     Label6: TLabel;
-    Label10: TLabel;
+    durumLabel: TLabel;
     Label11: TLabel;
     ProgressBar1: TProgressBar;
     StatusBar1: TStatusBar;
     procedure H1Click(Sender: TObject);
+    procedure N3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,6 +57,11 @@ uses UFhakkinda;
 procedure TFMain.H1Click(Sender: TObject);
 begin
 Fhakkinda.ShowModal;
+end;
+
+procedure TFMain.N3Click(Sender: TObject);
+begin
+Close();
 end;
 
 end.
