@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.225,=C:\Users\genura\Documents\RAD Studio\Projects\Project1.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.238,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.233,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.229,=C:\Users\genura\Documents\RAD Studio\Projects\Project1.res</Transaction>
+    <Transaction>2018.05.22 21:03:26.184,=C:\Users\genura\Documents\RAD Studio\Projects\Project1.res</Transaction>
+    <Transaction>2018.05.22 21:03:26.197,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018.05.22 21:04:40.606,C:\Users\genura\Desktop\camsan\camsan-oto-print\UFMain.dfm=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2018.05.22 21:04:40.606,C:\Users\genura\Desktop\camsan\camsan-oto-print\UFMain.h=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2018.05.22 21:04:40.606,C:\Users\genura\Desktop\camsan\camsan-oto-print\UFMain.cpp=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018.05.22 21:04:53.655,C:\Users\genura\Desktop\camsan\camsan-oto-print\camsanOtoPrint.cbproj=C:\Users\genura\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
