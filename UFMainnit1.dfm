@@ -1,6 +1,6 @@
 object FMain: TFMain
-  Left = 463
-  Top = 154
+  Left = 594
+  Top = 208
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = #199'AMSAN Oto Print v0.1'
@@ -15,6 +15,9 @@ object FMain: TFMain
   Menu = MainMenu1
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -43,11 +46,26 @@ object FMain: TFMain
       Font.Style = []
       ParentFont = False
     end
+    object hata: TLabel
+      Left = 128
+      Top = 9
+      Width = 49
+      Height = 23
+      Caption = 'hata'
+      Font.Charset = TURKISH_CHARSET
+      Font.Color = clRed
+      Font.Height = -19
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+      Visible = False
+    end
     object EtiketAdi: TEdit
       Left = 16
       Top = 37
       Width = 489
       Height = 31
+      Enabled = False
       Font.Charset = TURKISH_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
@@ -195,6 +213,7 @@ object FMain: TFMain
         0000000000000000000000000000000000000000000000000000}
       ParentDoubleBuffered = False
       TabOrder = 1
+      OnClick = btnEtiketDosyaAcClick
     end
   end
   object Panel2: TPanel
@@ -267,32 +286,35 @@ object FMain: TFMain
       Top = 32
       Width = 57
       Height = 33
+      EditorEnabled = False
       Font.Charset = TURKISH_CHARSET
       Font.Color = clGreen
       Font.Height = -19
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
-      MaxValue = 0
-      MinValue = 0
+      MaxValue = 60
+      MinValue = 3
       ParentFont = False
       TabOrder = 0
-      Value = 0
+      Value = 3
     end
     object komutSayisi: TSpinEdit
       Left = 16
       Top = 32
       Width = 57
       Height = 33
+      EditorEnabled = False
       Font.Charset = TURKISH_CHARSET
       Font.Color = clMaroon
       Font.Height = -19
       Font.Name = 'Verdana'
       Font.Style = []
-      MaxValue = 0
-      MinValue = 0
+      MaxLength = 99
+      MaxValue = 15
+      MinValue = 1
       ParentFont = False
       TabOrder = 1
-      Value = 0
+      Value = 1
     end
     object btnKomutGonder: TBitBtn
       Left = 320
@@ -434,6 +456,7 @@ object FMain: TFMain
         0000000000000000000000000000000000000000000000000000}
       ParentDoubleBuffered = False
       TabOrder = 2
+      OnClick = btnKomutGonderClick
     end
   end
   object GroupBox4: TGroupBox
@@ -448,23 +471,31 @@ object FMain: TFMain
     object Label7: TLabel
       Left = 16
       Top = 26
-      Width = 133
-      Height = 13
-      Caption = #304#351'lemi '#304'ptal etmek i'#231'in;'
+      Width = 370
+      Height = 14
+      Caption = 'Komut i'#351'lemini '#304'ptal etmek ve Program'#305' Kapatmak ....;'
+      Font.Charset = TURKISH_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Verdana'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
     end
     object Label8: TLabel
       Left = 16
       Top = 48
-      Width = 261
+      Width = 437
       Height = 13
-      Caption = '1- CTRL + ALT + DEL bas!... Windows'#39'a D'#246'n !'
+      Caption = 
+        '1- CTRL + ALT + DEL bas!... Mouse Klavye devrede !...bir kez ESC' +
+        '`e bas!...'
     end
     object Label9: TLabel
       Left = 16
       Top = 70
-      Width = 301
+      Width = 337
       Height = 13
-      Caption = '2 - Windows'#39'un herhangi bir yerinde ALT + F5 e Bas!'
+      Caption = '2 - ...Daha sonra Program'#305' KAPATMAK i'#231'in ALT + F5 e Bas!'
     end
   end
   object GroupBox3: TGroupBox
@@ -534,7 +565,6 @@ object FMain: TFMain
         Text = '...'
         Width = 50
       end>
-    ExplicitLeft = 8
   end
   object MainMenu1: TMainMenu
     Left = 352
@@ -543,6 +573,7 @@ object FMain: TFMain
       object N1: TMenuItem
         Caption = 'Komut g'#246'nder'
         ShortCut = 116
+        OnClick = N1Click
       end
       object N2: TMenuItem
         Caption = '-'
@@ -561,5 +592,17 @@ object FMain: TFMain
         OnClick = H1Click
       end
     end
+  end
+  object DialogEtiket: TOpenDialog
+    Filter = 'Etiket Dosyas'#305'|*.pld'
+    Options = [ofReadOnly, ofHideReadOnly, ofEnableSizing]
+    Left = 440
+    Top = 8
+  end
+  object zaman: TTimer
+    Enabled = False
+    OnTimer = zamanTimer
+    Left = 176
+    Top = 184
   end
 end
