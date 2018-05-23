@@ -34,8 +34,8 @@ type
     GroupBox3: TGroupBox;
     Label6: TLabel;
     durumLabel: TLabel;
-    Label11: TLabel;
-    ProgressBar1: TProgressBar;
+    etiketSayisi: TLabel;
+    islemDurumu: TProgressBar;
     StatusBar1: TStatusBar;
     DialogEtiket: TOpenDialog;
     hata: TLabel;
@@ -98,6 +98,11 @@ begin
   //timer'ýn kaç kere döngüye gireceðini belirliyor
   zs:=komutSayisi.Value;
 
+  // DURUM BÝLGÝLERÝ sýfýrlar
+  islemDurumu.Position:=0;
+  etiketSayisi.Caption:='-';
+  durumLabel.Caption:='%0';
+
   // program baþlðý
   proBaslik:= 'PosLabel 7.15 - ['+EtiketAdi.Text+']';
 
@@ -109,6 +114,7 @@ begin
   mesaj:=MessageDlg('Ýþleme devam etmek istiyor musun?..'+#13+#13+'Komut Gönderme esnasýnda MOUSE ve KLAVYE ÇALIÞMAZ !!!!'+#13+#13+'Komut Göndermeyi ÝPTAL etmek için   CTRL+ALT+Del tuþ kombinasyonu yaptýktan sonra 1 kere ESC`ye bas... daha sonrada ALT+F5`e basarsan, PROGRAM KAPANIR!',mtWarning,mbYesNo,0);
   if ( mesaj = mrCancel  ) then exit;
   if ( mesaj = mrno  ) then exit;
+
 
   BlockInput(True); //klavye mouse pasif
 
@@ -126,6 +132,13 @@ begin
   end;
 
   ShowWindow(proHandle,SW_SHOWNORMAL);
+
+    //-açýk kalmýþ pencere varsa esc ile kapat! ---->>> Burada aktif PRÝNT oluyor!!!!!
+  if AppActivate(PWideChar('Print'))=true then
+  begin
+  SendKeys(PChar('{ESC}'),true);
+  end;
+
   hataDurumu(false);
 
 
@@ -133,32 +146,53 @@ begin
    zaman.Interval:=1000 * komutAraligi.Value; //saniye olarak hesaplanmýþ olur!
    zaman.Enabled:=true;
 
-  BlockInput(False); //klavye  mouse aktif
+
+
 end;
 
 
 
 procedure TFMain.zamanTimer(Sender: TObject);
-begin
-    //
+var prms,durum1,durum2:string;
+   tmpos:integer;
 
+begin
+
+  // BÝTÝÞ ÝÞLEMLERÝ
   if zs <=0 then
   begin
    zaman.Enabled:=false; // timer kapandý.
-   MessageDlg('ÝÞLEM BÝTTÝ',mtInformation,mbOKCancel,0);
+   BlockInput(False); //klavye  mouse aktif
+   ShowMEssage('ÝÞLEM BÝTTÝ');
    exit; // bloktan çýkýldý
   end;
 
   // program aktif edildiðinde komut gönderilir...
   if AppActivate(PWideChar(proBaslik))=true then
   begin
-
+     Application.ProcessMessages;
      //SendKeys(PChar('{BKSP}'),true);
 
      SendKeys(PChar('(%fpr)'),true);
      Sleep(1000); //----------------------süreci görmek için yaptým silineilir!...
-     SendKeys(PChar('{ESC}'),true);
+     //SendKeys(PChar('{ESC}'),true);
+
+     SendKeys(PChar('(%fpp)'),true);
+
      Dec(zs); // her iþlem sonunda zaman sayacý 1 azalýr.
+
+
+     // DURUM BÝLGÝLERÝ
+     tmpos:=round(( (komutSayisi.Value - zs) / komutSayisi.Value )*100);
+
+     durum1:=Format(' Gönderilen: %d ad.  /  Kalan: %d ad. ',[(komutSayisi.Value - zs),komutSayisi.Value]);
+     etiketSayisi.Caption:=durum1;
+
+     durum2:=Format(' %%%d',[tmpos]);
+     durumLabel.Caption:=durum2;
+
+     islemDurumu.Position:=tmpos;
+     islemDurumu.Update;
   end;
 
 

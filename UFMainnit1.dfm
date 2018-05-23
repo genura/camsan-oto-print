@@ -505,14 +505,20 @@ object FMain: TFMain
     Height = 82
     BiDiMode = bdLeftToRight
     Caption = '  '#304#351'lem Bilgisi '
+    Font.Charset = TURKISH_CHARSET
+    Font.Color = clBlue
+    Font.Height = -12
+    Font.Name = 'Verdana'
+    Font.Style = [fsBold]
     ParentBiDiMode = False
+    ParentFont = False
     TabOrder = 3
     object Label6: TLabel
       Left = 16
       Top = 29
-      Width = 42
-      Height = 13
-      Caption = 'Genel :'
+      Width = 95
+      Height = 14
+      Caption = 'Etiket Say'#305's'#305'  :'
     end
     object durumLabel: TLabel
       Left = 543
@@ -527,8 +533,8 @@ object FMain: TFMain
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object Label11: TLabel
-      Left = 77
+    object etiketSayisi: TLabel
+      Left = 125
       Top = 29
       Width = 7
       Height = 16
@@ -540,7 +546,7 @@ object FMain: TFMain
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object ProgressBar1: TProgressBar
+    object islemDurumu: TProgressBar
       Left = 16
       Top = 51
       Width = 553
