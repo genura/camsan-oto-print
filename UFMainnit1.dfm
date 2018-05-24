@@ -3,7 +3,7 @@ object FMain: TFMain
   Top = 208
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = #199'AMSAN Oto Print v0.1'
+  Caption = #199'AMSAN Oto Print v0.2'
   ClientHeight = 455
   ClientWidth = 612
   Color = clBtnFace
@@ -293,10 +293,10 @@ object FMain: TFMain
       Font.Name = 'Verdana'
       Font.Style = [fsBold]
       MaxValue = 60
-      MinValue = 3
+      MinValue = 1
       ParentFont = False
       TabOrder = 0
-      Value = 3
+      Value = 1
     end
     object komutSayisi: TSpinEdit
       Left = 16
