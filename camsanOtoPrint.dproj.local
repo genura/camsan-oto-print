@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.351,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.445,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.075,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.266,=C:\Users\genura\Desktop\camsan\camsan-oto-print\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\genura\Desktop\camsan\camsan-oto-print\UFMainnit1.pas=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\genura\Desktop\camsan\camsan-oto-print\UFMainnit1.dfm=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.453,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.541,C:\Users\genura\Desktop\camsan\camsan-oto-print\camsanOtoPrint.dproj=C:\Users\genura\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.550,C:\Users\genura\Desktop\camsan\camsan-oto-print\UFhakkinda.pas=C:\Users\genura\Desktop\camsan\camsan-oto-print\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.550,C:\Users\genura\Desktop\camsan\camsan-oto-print\UFhakkinda.dfm=C:\Users\genura\Desktop\camsan\camsan-oto-print\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.071,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.453,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\genura\Desktop\camsan\camsan-oto-print\UFMainnit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.905,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.550,C:\Users\genura\Desktop\camsan\camsan-oto-print\Unit1.pas=C:\Users\genura\Desktop\camsan\camsan-oto-print\UFhakkinda.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.266,=C:\Users\genura\Desktop\camsan\camsan-oto-print\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.484,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018.05.23 00:44:17.068,=C:\Users\genura\Desktop\camsan\camsan-oto-print\sndkey32tr.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.541,C:\Users\genura\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\genura\Desktop\camsan\camsan-oto-print\camsanOtoPrint.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.068,=C:\Users\genura\Desktop\camsan\camsan-oto-print\sndkey32tr.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.550,C:\Users\genura\Desktop\camsan\camsan-oto-print\Unit1.dfm=C:\Users\genura\Desktop\camsan\camsan-oto-print\UFhakkinda.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.626,C:\Users\genura\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\genura\Desktop\camsan\camsan-oto-print\UFMainnit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.075,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.445,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.351,=C:\Users\genura\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

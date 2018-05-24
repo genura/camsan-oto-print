@@ -173,11 +173,13 @@ begin
      Application.ProcessMessages;
      //SendKeys(PChar('{BKSP}'),true);
 
-     SendKeys(PChar('(%fpr)'),true);
-     Sleep(1000); //----------------------süreci görmek için yaptým silineilir!...
-     //SendKeys(PChar('{ESC}'),true);
+     SendKeys(PChar('(%fp)'),true); // print menusunu açar ALT+f+p
+     Sleep(500); //----------------------süreci görmek için yaptým silineilir!...
+     SendKeys(PChar('(%p)'),true); // print eder  ALT+p
+     SendKeys(PChar('(%o)'),true); // input menusunu ok'ler  ALT+o
+     //     SendKeys(PChar('{ESC}'),true);
 
-     SendKeys(PChar('(%fpp)'),true);
+
 
      Dec(zs); // her iþlem sonunda zaman sayacý 1 azalýr.
 
