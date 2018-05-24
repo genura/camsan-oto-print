@@ -1,9 +1,9 @@
 object FMain: TFMain
-  Left = 594
-  Top = 208
+  Left = 918
+  Top = 345
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = #199'AMSAN Oto Print v0.2'
+  Caption = #199'AMSAN Oto Print v0.225'
   ClientHeight = 455
   ClientWidth = 612
   Color = clBtnFace
