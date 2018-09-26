@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, sEdit, Spin, Menus, Buttons, ComCtrls;
+  Dialogs, StdCtrls, ExtCtrls, Spin, Menus, Buttons, ComCtrls;
 
 type
   TFMain = class(TForm)
@@ -110,10 +110,10 @@ begin
   hataDurumu(false);
 
 
-  // iþlem için soru sor
-  mesaj:=MessageDlg('Ýþleme devam etmek istiyor musun?..'+#13+#13+'Komut Gönderme esnasýnda MOUSE ve KLAVYE ÇALIÞMAZ !!!!'+#13+#13+'Komut Göndermeyi ÝPTAL etmek için   CTRL+ALT+Del tuþ kombinasyonu yaptýktan sonra 1 kere ESC`ye bas... daha sonrada ALT+F5`e basarsan, PROGRAM KAPANIR!',mtWarning,mbYesNo,0);
+  // iþlem için soru sor-- isteðe baðlý çýkarýldý...
+(* mesaj:=MessageDlg('Ýþleme devam etmek istiyor musun?..'+#13+#13+'Komut Gönderme esnasýnda MOUSE ve KLAVYE ÇALIÞMAZ !!!!'+#13+#13+'Komut Göndermeyi ÝPTAL etmek için   CTRL+ALT+Del tuþ kombinasyonu yaptýktan sonra 1 kere ESC`ye bas... daha sonrada ALT+F5`e basarsan, PROGRAM KAPANIR!',mtWarning,mbYesNo,0);
   if ( mesaj = mrCancel  ) then exit;
-  if ( mesaj = mrno  ) then exit;
+  if ( mesaj = mrno  ) then exit;*)
 
 
   BlockInput(True); //klavye mouse pasif
@@ -163,7 +163,8 @@ begin
   begin
    zaman.Enabled:=false; // timer kapandý.
    BlockInput(False); //klavye  mouse aktif
-   ShowMEssage('ÝÞLEM BÝTTÝ');
+   //ShowMEssage('ÝÞLEM BÝTTÝ'); isteðe baðlý cýkarýldý
+   StatusBar1.Panels[1].Text:='ÝÞLEM BÝTTÝ';
    exit; // bloktan çýkýldý
   end;
 
@@ -173,11 +174,22 @@ begin
      Application.ProcessMessages;
      //SendKeys(PChar('{BKSP}'),true);
 
-     SendKeys(PChar('(%fpr)'),true);
+     SendKeys(PChar('(%fp)'),true); // print menusunu açar ALT+f+p
+     Sleep(500); //----------------------süreci görmek için yaptým silineilir!...
+     SendKeys(PChar('(%p)'),true); // print eder  ALT+p
      Sleep(1000); //----------------------süreci görmek için yaptým silineilir!...
-     //SendKeys(PChar('{ESC}'),true);
 
-     SendKeys(PChar('(%fpp)'),true);
+     SendKeys(PChar('{TAB}'),true);
+     SendKeys(PChar('{TAB}'),true);
+     SendKeys(PChar('{ENTER}'),true);
+
+
+
+
+
+     //     SendKeys(PChar('{ESC}'),true);
+
+
 
      Dec(zs); // her iþlem sonunda zaman sayacý 1 azalýr.
 
